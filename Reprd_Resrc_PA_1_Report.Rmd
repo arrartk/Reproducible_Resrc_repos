@@ -1,0 +1,43 @@
+---
+title: "Reprd_Resrc_PA_1_Report"
+author: "Arrart Kongtaln"
+date: "Sunday, January 18, 2015"
+output:
+  html_document:
+    keep_md: true
+---
+```{r echo=FALSE}
+##Necessary lib import
+library("knitr")
+##Set global paramters
+opts_chunk$set(echo=TRUE, results="asis", digits=7)
+```
+
+## Loading and preprocessing the data
+```{r}
+activity <- read.csv("activity.csv",na.strings=c("NA",""))
+##dim(activity)
+##17568
+##summary(activity)
+```
+
+## What is mean total number of steps taken per day?
+```{r}
+hist(activity$steps, breaks=50, col='blue')
+steps <- c(activity$steps)
+mean(steps, na.rm = TRUE)
+##ls_1 <- c(1,0,4,4,5,8,0,NA)
+##median(ls_1, na.rm = TRUE)
+median(steps, na.rm = TRUE)
+```
+
+
+## What is the average daily activity pattern?
+
+
+
+## Imputing missing values
+
+
+
+## Are there differences in activity patterns between weekdays and weekends?
